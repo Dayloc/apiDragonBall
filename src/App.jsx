@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+
 function App() {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,8 @@ function App() {
   useEffect(() => {
     obtenerCaracters();
   }, []);
+
+
 
   return (
     <div className="container text-center bg-dark text-warning py-4">
