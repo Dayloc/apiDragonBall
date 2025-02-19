@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 
 
-function App() {
+function App(props) {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
+
 
   const obtenerCaracters = async () => {
     try {
@@ -26,7 +27,7 @@ function App() {
     obtenerCaracters();
   }, []);
 
-
+console.log(props)
 
   return (
     <div className="container text-center bg-dark text-warning py-4">
@@ -55,6 +56,7 @@ function App() {
           ))}
         </div>
       )}
+      
     </div>
   );
 }
